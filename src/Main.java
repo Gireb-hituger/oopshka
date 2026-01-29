@@ -14,7 +14,7 @@ public class Main {
 //    ArrayList<Movie> movies = new ArrayList<>();
 //    movies.add(new Movie("The SpongeBob Movie: Search for SquarePants", "01:32:21", 2025));
 //    movies.add(new Movie("Toy Story", "01:21:00", 1995));
-//    movies.add(new Movie("Finding sadasdasdNemo", "01:40:00", 2003));
+//    movies.add(new Movie("Finding sadasdasdsadNemo", "01:40:00", 2003));
 //    movies.add(new Movie("The Incredibles", "01:55:00", 2004));
 //
 //    ArrayList<Viewer> viewers = new ArrayList<>();
