@@ -1,5 +1,6 @@
 package org.example.oopshka.api;
 
+
 import Movie.Movie;
 import org.example.oopshka.dao.MovieDao;
 import org.springframework.http.HttpStatus;
@@ -41,10 +42,25 @@ public class MovieController {
         }
     }
 
-    @DeleteMapping("/{id}")
-    public void delete(@PathVariable int id) {
+    @DeleteMapping("/{idkk}")
+    public void delete(@PathVariable int idkk) {
         try {
-            dao.deleteMovie(id);
+            dao.deleteMovie(idkk);
+        } catch (SQLException e) {
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    e.getMessage(),
+                    e
+            );
+        }
+    }
+
+    @PutMapping("/{id}")
+    public void updatenig(@PathVariable int id, @RequestParam String name){
+        try {
+            if (name != null) {
+                dao.updateMovieName(id, name);
+            };
         } catch (SQLException e) {
             throw new ResponseStatusException(
                     HttpStatus.BAD_REQUEST,

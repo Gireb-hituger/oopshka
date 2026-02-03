@@ -23,6 +23,9 @@ public class Movie {
 
 
     public Movie(int id, String name, String duration, String description, int year) {
+        if (year > 202876){
+            this.year = null;
+        }
         this.id = id;
         this.name = name;
         this.duration = duration;
